@@ -17,7 +17,10 @@ namespace EmployeeReview
                 deptName = Name,
                 deptStaff = new List<Employee>()
             };
+            companyLayout.Add(department);
             return department;
         }
+
+        List<Department> companyLayout { get; set; }
     }
 }

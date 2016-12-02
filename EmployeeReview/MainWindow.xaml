@@ -7,29 +7,41 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="230" Margin="20,70,0,0" VerticalAlignment="Top" Width="165">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="230" Margin="20,70,0,0" VerticalAlignment="Top" Width="165" SelectionChanged="listView_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
                         <TextBlock Text="{Binding employeeName}"/>
-                        <CheckBox x:Name="checkBox" Content="" HorizontalAlignment="Left" Margin="125,30,0,0" />
+                        <!--<CheckBox x:Name="checkBox1" Content="" HorizontalAlignment="Left" Margin="125,30,0,0" />-->
                     </WrapPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
+            <!--<TabControl x:Name="tabControl" Height="100" Width="100">
+                <TabItem Header="All Staff" Content="{Binding listView}"/>
+                <Grid Background="#FFE5E5E5"/>
+
+                <TabItem Header="TabItem">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="General">
+                    <Label Content="Content goes here..." />
+                </TabItem>-->
+            <!--</TabControl>-->
         </ListView>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="75" Margin="220,165,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="270"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="220,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="358,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="220,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" Margin="358,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="addEmployee" Content="Employee" HorizontalAlignment="Left" Margin="220,30,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="descriptionBox" HorizontalAlignment="Left" Height="75" Margin="220,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="23" Margin="220,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="emailBox" HorizontalAlignment="Left" Height="23" Margin="358,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="phoneBox" HorizontalAlignment="Left" Height="23" Margin="220,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="salaryBox" HorizontalAlignment="Left" Height="23" Margin="358,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="addEmployee" Content="Employee" HorizontalAlignment="Left" Margin="220,30,0,0" VerticalAlignment="Top" Width="75" Click="addEmployee_Click"/>
         <Button x:Name="addDepartment" Content="Department" HorizontalAlignment="Left" Margin="300,30,0,0" VerticalAlignment="Top" Width="75"/>
         <Label x:Name="Add" Content="Add:" HorizontalAlignment="Left" Margin="220,0,0,0" VerticalAlignment="Top" Height="30"/>
         <Label x:Name="Name" Content="Name" HorizontalAlignment="Left" Margin="220,50,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label" Content="Email" HorizontalAlignment="Left" Margin="358,50,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Phone #" HorizontalAlignment="Left" Margin="220,99,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Salary" HorizontalAlignment="Left" Margin="358,99,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checkBox" Content="Satisfactory Performance" HorizontalAlignment="Left" Margin="220,255,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBox2" Content="Satisfactory Performance" HorizontalAlignment="Left" Margin="220,255,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="AngelCorp" Content="Angel Corp." HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold"/>
 
     </Grid>
 </Window>

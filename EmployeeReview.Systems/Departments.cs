@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeReview
 {
-    class Department
+    public class Department
     {
         public List<Employee> deptStaff { get; set; } = new List<Employee>();
 
@@ -14,7 +14,9 @@ namespace EmployeeReview
 
         public string deptName { get; set; }
 
-        public Employee addEmployee(string Name, string PhoneNumber, string Email, double Salary)
+        public int defaultSalary { get; set; } = 30000;
+
+        public Employee addEmployee(string Name, string PhoneNumber, string Email, int Salary)
         {
             var employee = new Employee
             {
@@ -24,6 +26,7 @@ namespace EmployeeReview
                 salary = Salary,
                 isSatisfactory = true
             };
+            deptStaff.Add(employee);
             return employee;
         }
     }

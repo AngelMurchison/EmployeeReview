@@ -16,9 +16,9 @@ namespace EmployeeReview
 
         public string phoneNumber { get; set; }
 
-        public double salary { get; set; }
+        public int salary { get; set; }
 
-        public bool isSatisfactory { get; set; }
+        public bool isSatisfactory { get; set; } = true;
 
     }
 }
