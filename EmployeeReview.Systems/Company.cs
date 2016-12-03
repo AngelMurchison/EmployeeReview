@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeReview
 {
-    class Company
+    public class Company
     {
         public string CompanyName { get; set; } = "Angel Corp.";
 
@@ -15,12 +15,11 @@ namespace EmployeeReview
             var department = new Department
             {
                 deptName = Name,
-                deptStaff = new List<Employee>()
             };
             companyLayout.Add(department);
             return department;
         }
 
-        List<Department> companyLayout { get; set; }
+        public List<Department> companyLayout { get; set; } = new List<Department>();
     }
 }

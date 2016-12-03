@@ -8,7 +8,7 @@ namespace EmployeeReview
 {
     public class Department
     {
-        public List<Employee> deptStaff { get; set; } = new List<Employee>();
+        public List<Employee> companyRoster { get; set; } = new List<Employee>();
 
         public Guid deptGuid { get; set; } = Guid.NewGuid();
 
@@ -16,7 +16,7 @@ namespace EmployeeReview
 
         public int defaultSalary { get; set; } = 30000;
 
-        public Employee addEmployee(string Name, string PhoneNumber, string Email, int Salary)
+        public Employee addEmployee(string Name, string PhoneNumber, string Email, int Salary, bool Satisfactory)
         {
             var employee = new Employee
             {
@@ -24,9 +24,8 @@ namespace EmployeeReview
                 email = Email,
                 phoneNumber = PhoneNumber,
                 salary = Salary,
-                isSatisfactory = true
             };
-            deptStaff.Add(employee);
+            companyRoster.Add(employee);
             return employee;
         }
     }

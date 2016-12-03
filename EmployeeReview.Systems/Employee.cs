@@ -18,7 +18,7 @@ namespace EmployeeReview
 
         public int salary { get; set; }
 
-        public bool isSatisfactory { get; set; } = true;
+        public bool isSatisfactory { get; set; }
 
     }
 }

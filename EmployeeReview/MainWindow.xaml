@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmployeeReview"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="450" Width="525">
     <Grid>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="230" Margin="20,70,0,0" VerticalAlignment="Top" Width="165" SelectionChanged="listView_SelectionChanged">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="230" Margin="20,41,0,0" VerticalAlignment="Top" Width="165" SelectionChanged="listView_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
@@ -34,14 +34,16 @@
         <TextBox x:Name="phoneBox" HorizontalAlignment="Left" Height="23" Margin="220,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="salaryBox" HorizontalAlignment="Left" Height="23" Margin="358,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="addEmployee" Content="Employee" HorizontalAlignment="Left" Margin="220,30,0,0" VerticalAlignment="Top" Width="75" Click="addEmployee_Click"/>
-        <Button x:Name="addDepartment" Content="Department" HorizontalAlignment="Left" Margin="300,30,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="addDepartment" Content="Department" HorizontalAlignment="Left" Margin="300,30,0,0" VerticalAlignment="Top" Width="75" Click="addDepartment_Click"/>
         <Label x:Name="Add" Content="Add:" HorizontalAlignment="Left" Margin="220,0,0,0" VerticalAlignment="Top" Height="30"/>
         <Label x:Name="Name" Content="Name" HorizontalAlignment="Left" Margin="220,50,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label" Content="Email" HorizontalAlignment="Left" Margin="358,50,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Phone #" HorizontalAlignment="Left" Margin="220,99,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Salary" HorizontalAlignment="Left" Margin="358,99,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checkBox2" Content="Satisfactory Performance" HorizontalAlignment="Left" Margin="220,255,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="AngelCorp" Content="Angel Corp." HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold"/>
+        <CheckBox x:Name="checkBox" Content="On Probation" HorizontalAlignment="Left" Margin="220,255,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="angelCorpLabel" Content="Angel Corp." HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold"/>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="74" Margin="20,305,0,0" VerticalAlignment="Top" Width="165"/>
+        <Label x:Name="label3" Content="Departments" HorizontalAlignment="Left" Margin="20,279,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
