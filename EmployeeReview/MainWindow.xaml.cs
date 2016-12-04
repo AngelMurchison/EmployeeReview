@@ -20,19 +20,32 @@ namespace EmployeeReview
     /// </summary>
     public partial class MainWindow : Window
     {
-        public Guid uniqueEmployees = Guid.Empty;
-
-        public Department dept { get; set; } = new Department();
+        public List<Guid> uniqueEmployees = new List<Guid>();
 
         public Company AngelCorp { get; } = new Company();
 
+        public Department dept { get; set; } = new Department();
+
+        public Employee sample { get; set; } = new Employee();
         public MainWindow()
         {
             InitializeComponent();
             this.listView.ItemsSource = dept.companyRoster;
             this.menu.ItemsSource = AngelCorp.companyLayout;
+            sampler();
         }
-
+        // for debugging.
+        public void sampler(string name = "sample", string number = "number", string email = "email", int salary = 10000, bool rating = true)
+        {
+            sample.employeeName = name;
+            sample.phoneNumber = number;
+            sample.email = email;
+            sample.salary = salary;
+            sample.isSatisfactory = rating;
+            dept.companyRoster.Add(sample);
+            uniqueEmployees.Add(sample.employeeGuid);
+        }
+        // add an employee to a dept.
         private void addEmployee_Click(object sender, RoutedEventArgs e)
         {
             {
@@ -48,7 +61,7 @@ namespace EmployeeReview
                 this.listView.Items.Refresh();
             }
         }
-
+        // add a dept to the company.
         private void addDepartment_Click(object sender, RoutedEventArgs e)
         {
             {
@@ -61,10 +74,11 @@ namespace EmployeeReview
             }
         }
 
-        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+        //private void MenuItem_Click(object sender, RoutedEventArgs e)
+        //{
+        //    sender = sender as MenuItem;
+        //    //listView.ItemsSource = 
+        //}
 
         //private void checkBox1_Checked(object sender, RoutedEventArgs e)
         //{

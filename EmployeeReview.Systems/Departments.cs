@@ -16,6 +16,11 @@ namespace EmployeeReview
 
         public int defaultSalary { get; set; } = 30000;
 
+        public override string ToString()
+        {
+            return $"{deptName}";
+        }
+
         public Employee addEmployee(string Name, string PhoneNumber, string Email, int Salary, bool Satisfactory)
         {
             var employee = new Employee
