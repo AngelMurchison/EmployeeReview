@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace EmployeeReview
 {
@@ -20,5 +21,11 @@ namespace EmployeeReview
 
         public bool isSatisfactory { get; set; }
 
+        public string employeeFeedback { get; set; }
+
+        //public static implicit operator Employee(ListViewItem v)
+        //{
+
+        //}
     }
 }

@@ -14,14 +14,9 @@ namespace EmployeeReview
 
         public string deptName { get; set; }
 
-        public int defaultSalary { get; set; } = 30000;
+        public int averageSalary { get; set; } = 30000;
 
-        public override string ToString()
-        {
-            return $"{deptName}";
-        }
-
-        public Employee addEmployee(string Name, string PhoneNumber, string Email, int Salary, bool Satisfactory)
+        public Employee addEmployee(string Name, string PhoneNumber, string Email, int Salary, bool Satisfactory, string employeeFeedback)
         {
             var employee = new Employee
             {
@@ -29,9 +24,16 @@ namespace EmployeeReview
                 email = Email,
                 phoneNumber = PhoneNumber,
                 salary = Salary,
+                employeeFeedback = employeeFeedback
             };
             companyRoster.Add(employee);
             return employee;
         }
+        public override string ToString()
+        {
+            return $"{deptName}";
+        }
+
     }
 }
+
