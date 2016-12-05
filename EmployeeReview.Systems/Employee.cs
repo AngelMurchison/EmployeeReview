@@ -22,10 +22,5 @@ namespace EmployeeReview
         public bool isSatisfactory { get; set; }
 
         public string employeeFeedback { get; set; }
-
-        //public static implicit operator Employee(ListViewItem v)
-        //{
-
-        //}
     }
 }

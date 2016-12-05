@@ -8,18 +8,20 @@ namespace EmployeeReview
 {
     public class Company
     {
+        public List<Department> companyLayout { get; set; } = new List<Department>();
+
         public string CompanyName { get; set; } = "Angel Corp.";
 
         public Department addDepartment(string Name)
         {
             var department = new Department
             {
-                deptName = Name,
+                deptName = Name
             };
             companyLayout.Add(department);
             return department;
         }
 
-        public List<Department> companyLayout { get; set; } = new List<Department>();
+
     }
 }

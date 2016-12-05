@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="525">
     <Grid>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="230" Margin="20,41,0,0" VerticalAlignment="Top" Width="165" SelectionChanged="listView_SelectionChanged">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="230" Margin="20,50,0,0" VerticalAlignment="Top" Width="165" 
+                  SelectionChanged="listView_SelectionChanged" SelectionMode="Single">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
@@ -16,18 +17,6 @@
                     </WrapPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
-
-            <!--<TabControl x:Name="tabControl" Height="100" Width="100">
-                <TabItem Header="All Staff" Content="{Binding listView}"/>
-                <Grid Background="#FFE5E5E5"/>
-
-                <TabItem Header="TabItem">
-                    <Grid Background="#FFE5E5E5"/>
-                </TabItem>
-                <TabItem Header="General">
-                    <Label Content="Content goes here..." />
-                </TabItem>-->
-            <!--</TabControl>-->
         </ListView>
         <TextBox x:Name="descriptionBox" HorizontalAlignment="Left" Height="75" Margin="220,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Text="n/a"/>
         <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="23" Margin="220,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
@@ -43,11 +32,19 @@
         <Label x:Name="label2" Content="Salary" HorizontalAlignment="Left" Margin="358,99,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="checkBox" Content="On Probation" HorizontalAlignment="Left" Margin="220,255,0,0" VerticalAlignment="Top"/>
         <Label x:Name="angelCorpLabel" Content="Angel Corp." HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold"/>
-        <Menu x:Name="menu" HorizontalAlignment="Left" Height="74" Margin="20,305,0,0" VerticalAlignment="Top" Width="165"/>
         <Label x:Name="label3" Content="Departments" HorizontalAlignment="Left" Margin="20,279,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="raiseBox" HorizontalAlignment="Left" Height="23" Margin="279,291,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="raiseButton" Content="Raise" Margin="404,294,57,0" VerticalAlignment="Top" />
         <Button x:Name="updateProperties" Content="Save" HorizontalAlignment="Left" Margin="399,255,0,0" VerticalAlignment="Top" Width="75" Click="updateProperties_Click"/>
+        <ListView x:Name="listView1" HorizontalAlignment="Left" Height="100" Margin="20,305,0,0" VerticalAlignment="Top" Width="165" SelectionChanged="listView1_SelectionChanged"
+                  SelectionMode="Single">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="label4" Content="Employees" HorizontalAlignment="Left" Margin="20,27,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
