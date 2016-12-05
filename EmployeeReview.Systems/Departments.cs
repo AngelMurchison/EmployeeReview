@@ -8,36 +8,37 @@ namespace EmployeeReview
 {
     public class Department
     {
-        public Department()
+        public Department(string Name)
         {
+            Name = this.Name;
         }
 
-        public List<Employee> companyRoster { get; set; } = new List<Employee>();
+        public List<Employee> Employees { get; set; } = new List<Employee>();
 
         public List<Employee> Dept { get; set; }
 
         public Guid deptGuid { get; set; } = Guid.NewGuid();
 
-        public string deptName { get; set; }
+        public string Name { get; set; }
 
-        public int averageSalary { get; set; }
+        public int totalSalary { get; set; }
 
         public Employee addEmployee(string Name, string PhoneNumber, string Email, int Salary, bool Satisfactory, string employeeFeedback = "n/a")
         {
             var employee = new Employee
             {
-                employeeName = Name,
+                Name = Name,
                 email = Email,
                 phoneNumber = PhoneNumber,
                 salary = Salary,
-                employeeFeedback = employeeFeedback
+                Feedback = employeeFeedback
             };
-            companyRoster.Add(employee);
+            Employees.Add(employee);
             return employee;
         }
         public override string ToString()
         {
-            return $"{deptName}";
+            return $"{Name}";
         }
 
     }

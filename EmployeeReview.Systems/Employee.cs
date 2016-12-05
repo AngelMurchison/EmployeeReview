@@ -11,7 +11,7 @@ namespace EmployeeReview
     {
         public Guid employeeGuid { get; set; } = Guid.NewGuid();
 
-        public string employeeName { get; set; }
+        public string Name { get; set; }
 
         public string email { get; set; }
 
@@ -21,6 +21,6 @@ namespace EmployeeReview
 
         public bool isSatisfactory { get; set; }
 
-        public string employeeFeedback { get; set; }
+        public string Feedback { get; set; }
     }
 }

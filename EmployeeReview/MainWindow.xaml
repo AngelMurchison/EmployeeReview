@@ -9,10 +9,10 @@
     <Grid>
         <ListView x:Name="listView" HorizontalAlignment="Left" Height="230" Margin="20,50,0,0" VerticalAlignment="Top" Width="165" 
                   SelectionChanged="listView_SelectionChanged" SelectionMode="Single">
-            <ListView.ItemTemplate>
+            <ListView.ItemTemplate> <!--formatting--> 
                 <DataTemplate>
                     <WrapPanel>
-                        <TextBlock Text="{Binding employeeName}"/>
+                        <TextBlock Text="{Binding Name}"/>
                         <!--<CheckBox x:Name="checkBox1" Content="" HorizontalAlignment="Left" Margin="125,30,0,0" />-->
                     </WrapPanel>
                 </DataTemplate>
@@ -36,13 +36,16 @@
         <TextBox x:Name="raiseBox" HorizontalAlignment="Left" Height="23" Margin="279,291,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="raiseButton" Content="Raise" Margin="404,294,57,0" VerticalAlignment="Top" />
         <Button x:Name="updateProperties" Content="Save" HorizontalAlignment="Left" Margin="399,255,0,0" VerticalAlignment="Top" Width="75" Click="updateProperties_Click"/>
-        <ListView x:Name="listView1" HorizontalAlignment="Left" Height="100" Margin="20,305,0,0" VerticalAlignment="Top" Width="165" SelectionChanged="listView1_SelectionChanged"
+        <ListView x:Name="listView1" HorizontalAlignment="Left" Height="100" Margin="20,309,0,0" VerticalAlignment="Top" Width="165" SelectionChanged="listView1_SelectionChanged"
                   SelectionMode="Single">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
+            <ListView.ItemTemplate>
+                <!--formatting-->
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding Name}"/>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
         <Label x:Name="label4" Content="Employees" HorizontalAlignment="Left" Margin="20,27,0,0" VerticalAlignment="Top"/>
 
